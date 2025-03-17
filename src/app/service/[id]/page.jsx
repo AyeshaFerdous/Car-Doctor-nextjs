@@ -1,17 +1,14 @@
-import dbConnect, { dbName } from '@/lib/dbConnecter';
-import { ObjectId } from 'mongodb';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FiFileText } from "react-icons/fi";
 import { HiArrowRight } from "react-icons/hi";
+
 const ServiceDetails = async ({params}) => {
     const param = await params;
-    console.log(param.id);
-
-    const servicesCollection = await dbConnect(dbName.servicesCollection)
-    const service = await servicesCollection.findOne({_id : new ObjectId(param.id)})
-    console.log(service)
+  const res = await fetch(`http://localhost:3000/api/service/${param.id}`)
+  const service = await res.json()
     return (
         <div className="w-10/12 mx-auto mt-12">
         {/* Details Banner */}
