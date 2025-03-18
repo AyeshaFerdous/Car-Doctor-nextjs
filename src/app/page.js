@@ -3,6 +3,6 @@ import Services from "./Components/Services";
 
 export default function Home() {
   return (
-   <Services/>
+    <Services/>
   );
 }

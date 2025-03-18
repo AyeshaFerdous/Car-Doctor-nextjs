@@ -9,8 +9,7 @@ import React from "react";
 const Navbar = () => {
   const pathname = usePathname();
   const { data: session, status } = useSession();
-  console.log(session);
-
+  
   const navlinks = (
     <>
       <li>
@@ -47,10 +46,10 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          href="/contact"
+          href="/my-bookings"
           className="text-md font-medium text-black hover:text-[#FF3811] active:text-[#FF3811]"
         >
-          Contact
+          My Bookings
         </Link>
       </li>
      
