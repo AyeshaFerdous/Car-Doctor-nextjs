@@ -8,8 +8,8 @@ export const dbName = {
   };
 
 export default async function dbConnect(collection) {
-    const uri = `mongodb+srv://${process.env.DB_NAME}:${process.env.DB_PASS}@cluster0.isdx8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-  
+  const uri = process.env.NEXT_PUBLIC_MONGODB_URI;
+
     const client = new MongoClient(uri, {
       serverApi: {
         version: ServerApiVersion.v1,

@@ -7,7 +7,7 @@ import { HiArrowRight } from "react-icons/hi";
 
 const ServiceDetails = async ({params}) => {
     const param = await params;
-  const res = await fetch(`http://localhost:3000/api/service/${param.id}`)
+  const res = await fetch(`https://next-js-car-doctor-one.vercel.app/api/service/${param.id}`)
   const service = await res.json()
     return (
         <div className="w-10/12 mx-auto mt-12">

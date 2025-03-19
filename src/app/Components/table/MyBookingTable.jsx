@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaEdit } from "react-icons/fa"
 import MyBookingButton from '@/app/my-bookings/components/MyBookingButton';
 const MyBookingTable = ({data}) => {
+  
     return (
         <div className="w-10/12 mx-auto mb-12">
         <div className="overflow-x-auto">
@@ -21,7 +22,7 @@ const MyBookingTable = ({data}) => {
               </tr>
             </thead>
             <tbody>
-              {data.map((booking, index) => (
+              {data?.map((booking, index) => (
                 <tr key={booking._id}>
                   <td>
                     <Image

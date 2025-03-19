@@ -8,7 +8,7 @@ const MyBookingButton = ({id}) => {
 
     const router = useRouter()
     const handleDelete = async (id)=>{
-       const res = await fetch(`http://localhost:3000/api/service/${id}`,{
+       const res = await fetch(`https://next-js-car-doctor-one.vercel.app/api/service/${id}`,{
         method : 'DELETE'
        })
        const data = await res.json()
